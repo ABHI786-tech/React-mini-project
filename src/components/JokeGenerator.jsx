@@ -20,8 +20,8 @@ const JokeGenerator = () => {
     }
 
     return (
-        <div className="min-h-screen flex justify-center items-center bg-gradient-to-r from-green-300 to-green-500 p-5">
-            <div className="bg-white shadow-2xl rounded-2xl p-10 max-w-xl w-full text-center transition-all duration-300">
+        <div className="min-h-screen flex justify-center items-center bg-linear-to-r  from-green-300 to-green-500 p-5">
+            <div className="bg-white shadow-2xl rounded-2xl p-10 max-w-xl  w-full text-center transition-all duration-300">
                 
                 <h1 className="text-3xl font-bold text-green-700 mb-6">
                     😂 Joke Generator
