@@ -5,6 +5,7 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 // import FormSubmission from './components/formSubmission.jsx'
 import JokeGenerator from './components/JokeGenerator.jsx'
+import PasswordValidator from './components/PasswordValidator.jsx'
 // import FormSubmission from './App'
 
 
@@ -12,7 +13,8 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       {/* <App /> */}
-      <JokeGenerator />
+      {/* <JokeGenerator /> */}
+      <PasswordValidator />
       {/* <FormSubmission /> */}
 
     </BrowserRouter>
