@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom'
 import JokeGenerator from './components/JokeGenerator.jsx'
 import IpAddressFinder from './components/IpAddressFinder.jsx'
 import DiceRolling from './components/DiceRolling.jsx'
+import RockPaperScissor from './components/RockPaperScissor.jsx'
 // import FormSubmission from './App'
 
 
@@ -17,7 +18,8 @@ createRoot(document.getElementById('root')).render(
       {/* <FormSubmission /> */}
       {/* <JokeGenerator /> */}
       {/* <IpAddressFinder /> */}
-      <DiceRolling />
+      {/* <DiceRolling /> */}
+      <RockPaperScissor />
 
     </BrowserRouter>
    </StrictMode>,
