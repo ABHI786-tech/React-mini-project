@@ -8,6 +8,7 @@ import JokeGenerator from './components/JokeGenerator.jsx'
 import IpAddressFinder from './components/IpAddressFinder.jsx'
 import DiceRolling from './components/DiceRolling.jsx'
 import RockPaperScissor from './components/RockPaperScissor.jsx'
+import ToDooList from './components/ToDooList.jsx'
 // import FormSubmission from './App'
 
 
@@ -19,7 +20,8 @@ createRoot(document.getElementById('root')).render(
       {/* <JokeGenerator /> */}
       {/* <IpAddressFinder /> */}
       {/* <DiceRolling /> */}
-      <RockPaperScissor />
+      {/* <RockPaperScissor /> */}
+      <ToDooList />
 
     </BrowserRouter>
    </StrictMode>,
