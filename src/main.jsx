@@ -24,8 +24,8 @@ createRoot(document.getElementById('root')).render(
       {/* <DiceRolling /> */}
       {/* <RockPaperScissor /> */}
       {/* <ToDooList /> */}
-      {/* <CoinFlipper /> */}
-      <ColorBoxApp />
+      <CoinFlipper />
+      {/* <ColorBoxApp /> */}
 
     </BrowserRouter>
    </StrictMode>,
