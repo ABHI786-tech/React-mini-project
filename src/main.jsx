@@ -9,6 +9,8 @@ import IpAddressFinder from './components/IpAddressFinder.jsx'
 import DiceRolling from './components/DiceRolling.jsx'
 import RockPaperScissor from './components/RockPaperScissor.jsx'
 import ToDooList from './components/ToDooList.jsx'
+import CoinFlipper from './components/CoinFlipper.jsx'
+import ColorBoxApp from './components/ColorBoxApp.jsx'
 // import FormSubmission from './App'
 
 
@@ -21,7 +23,9 @@ createRoot(document.getElementById('root')).render(
       {/* <IpAddressFinder /> */}
       {/* <DiceRolling /> */}
       {/* <RockPaperScissor /> */}
-      <ToDooList />
+      {/* <ToDooList /> */}
+      {/* <CoinFlipper /> */}
+      <ColorBoxApp />
 
     </BrowserRouter>
    </StrictMode>,
