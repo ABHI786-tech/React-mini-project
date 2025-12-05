@@ -12,6 +12,7 @@ import ToDooList from './components/ToDooList.jsx'
 import CoinFlipper from './components/CoinFlipper.jsx'
 import ColorBoxApp from './components/ColorBoxApp.jsx'
 import CreditCardValidator from './components/CreditCardValidator.jsx'
+import DomainNameFinder from './components/DomainNameFinder.jsx'
 // import FormSubmission from './App'
 
 
@@ -27,7 +28,8 @@ createRoot(document.getElementById('root')).render(
       {/* <ToDooList /> */}
       {/* <ColorBoxApp /> */}
       {/* <CoinFlipper /> */}
-      <CreditCardValidator />
+      {/* <CreditCardValidator /> */}
+      <DomainNameFinder />
 
     </BrowserRouter>
    </StrictMode>,
