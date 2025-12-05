@@ -11,6 +11,7 @@ import RockPaperScissor from './components/RockPaperScissor.jsx'
 import ToDooList from './components/ToDooList.jsx'
 import CoinFlipper from './components/CoinFlipper.jsx'
 import ColorBoxApp from './components/ColorBoxApp.jsx'
+import CreditCardValidator from './components/CreditCardValidator.jsx'
 // import FormSubmission from './App'
 
 
@@ -24,8 +25,9 @@ createRoot(document.getElementById('root')).render(
       {/* <DiceRolling /> */}
       {/* <RockPaperScissor /> */}
       {/* <ToDooList /> */}
-      <CoinFlipper />
       {/* <ColorBoxApp /> */}
+      {/* <CoinFlipper /> */}
+      <CreditCardValidator />
 
     </BrowserRouter>
    </StrictMode>,
