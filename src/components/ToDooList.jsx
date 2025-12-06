@@ -5,15 +5,10 @@ const ToDooList = () => {
     const [todos, setTodos] = useState([]);
     const [editId, setEditId] = useState(null);
 
-
-    const handleChange = (e) => {
-        setInputValue(e.target.value);
-    };
-
+    const handleChange = (e) => setInputValue(e.target.value);
 
     const handleAdd = () => {
         if (!inputValue.trim()) return;
-
 
         if (editId !== null) {
             const updatedList = todos.map((item) =>
@@ -21,9 +16,7 @@ const ToDooList = () => {
             );
             setTodos(updatedList);
             setEditId(null);
-        }
-
-        else {
+        } else {
             const newTodo = {
                 id: todos.length + 1,
                 text: inputValue,
@@ -31,14 +24,10 @@ const ToDooList = () => {
             setTodos([...todos, newTodo]);
         }
 
-
         setInputValue("");
     };
 
-    // Delete Todo
-    const handleDelete = (id) => {
-        setTodos(todos.filter((item) => item.id !== id));
-    };
+    const handleDelete = (id) => setTodos(todos.filter((item) => item.id !== id));
 
     const handleEdit = (item) => {
         setInputValue(item.text);
@@ -46,14 +35,16 @@ const ToDooList = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 flex justify-center items-start py-10 bg-linear-to-b from-gray-300 to-gray-400">
-            <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-6">
+        <div className="min-h-screen bg-linear-to-b from-gray-300 to-gray-400 flex justify-center items-start py-10 px-4">
+            <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-6 sm:p-8">
 
                 {/* Heading */}
-                <h1 className="text-3xl font-bold text-center mb-5">Todo App</h1>
+                <h1 className="text-2xl sm:text-3xl font-bold text-center mb-6">
+                    Todo App
+                </h1>
 
                 {/* Input Section */}
-                <div className="flex gap-2 mb-5">
+                <div className="flex flex-col sm:flex-row gap-2 mb-6">
                     <input
                         value={inputValue}
                         type="text"
@@ -61,9 +52,8 @@ const ToDooList = () => {
                         className="flex-1 border rounded-xl px-3 py-2 focus:outline-none"
                         onChange={handleChange}
                     />
-
                     <button
-                        className="bg-blue-600 text-white px-4 py-2 rounded-xl shadow"
+                        className="bg-blue-600 text-white px-4 py-2 rounded-xl shadow hover:bg-blue-700 transition"
                         onClick={handleAdd}
                     >
                         {editId !== null ? "Save" : "Add"}
@@ -81,7 +71,7 @@ const ToDooList = () => {
                             key={item.id}
                             className="flex items-center justify-between bg-gray-50 p-3 rounded-xl shadow"
                         >
-                            <span className="text-gray-800">{item.text}</span>
+                            <span className="text-gray-800 whitespace-pre-wrap">{item.text}</span>
 
                             {/* Buttons */}
                             <div className="flex gap-3">
@@ -109,3 +99,6 @@ const ToDooList = () => {
 };
 
 export default ToDooList;
+
+
+
