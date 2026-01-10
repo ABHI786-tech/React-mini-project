@@ -1,33 +1,64 @@
-import React from 'react'
+import React from "react";
+import Projects from "./constant/projects";
+
+const ProjectCard = ({ title, description, image, link }) => {
+  return (
+    <div
+      className="group bg-white rounded-2xl overflow-hidden
+           transform hover:-translate-y-2 transition-all duration-300
+           hover:shadow-[0_15px_30px_-10px_rgba(0,0,0,0.5)]"
+    >
+      <div className="overflow-hidden">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-[200px] object-cover transform group-hover:scale-110 transition duration-500"
+        />
+      </div>
+
+      <div className="p-6">
+        <h3 className="text-xl font-semibold text-gray-800 mb-2">
+          {title}
+        </h3>
+
+        <p className="text-sm text-gray-600 mb-5">
+          {description}
+        </p>
+
+        <a
+          href={link}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 bg-indigo-600 text-white px-5 py-2.5 rounded-lg text-sm font-medium
+                     hover:bg-indigo-700 transition-all duration-300 group-hover:translate-x-1"
+        >
+          View Project →
+        </a>
+      </div>
+    </div>
+  );
+};
 
 const App = () => {
-    return (
-        <div className=''>
-            <form className="max-w-sm mx-auto">
-                <div className="mb-5">
-                    <label for="email-alternative" className="block mb-2.5 text-sm font-medium text-heading">Your email</label>
-                    <input type="email" id="email-alternative" className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body" placeholder="name@gmail.com" required />
-                </div>
-                <div className="mb-5">
-                    <label for="password-alternative" className="block mb-2.5 text-sm font-medium text-heading">Your password</label>
-                    <input type="password" id="password-alternative" className="bg-neutral-secondary-medium border border-default-medium text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow placeholder:text-body" placeholder="••••••••" required />
-                </div>
-                <div className="flex items-start mb-5">
-                    <label for="remember-alternative" className="flex items-center h-5">
-                        <input id="remember-alternative" type="checkbox" value="" className="w-4 h-4 border border-default-medium rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft" required />
-                        <p className="ms-2 text-sm font-medium text-heading select-none">I agree with the <a href="#" className="text-fg-brand hover:underline">terms and conditions</a>.</p>
-                    </label>
-                </div>
-                <button type="submit" className="text-black bg-blue-800 box-border border border-transparent hover:bg-blue-900 focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none">Submit</button>
-            </form>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-400 to-slate-500">
+      {/* Sticky Header */}
+      <header className="sticky top-0 z-50 bg-gradient-to-r from-gray-900 to-gray-700 shadow-lg">
+        <h1 className="text-3xl md:text-4xl font-bold text-center text-white py-6">
+          🚀 My Projects
+        </h1>
+      </header>
 
+      {/* Content */}
+      <main className="px-6 py-14">
+        <div className="max-w-7xl mx-auto grid gap-14 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {Projects.map((project) => (
+            <ProjectCard key={project.id} {...project} />
+          ))}
         </div>
-    )
-}
+      </main>
+    </div>
+  );
+};
 
-export default App
-
-
-
-
-
+export default App;
